@@ -1106,4 +1106,10 @@ input:checked + .slider:before {
 		height: 60%;
 		margin: 0 auto; 
 	}
+
+	#eye{
+		height: 100px;
+		padding-left: 22%;
+		padding-top: 5%;
+	}
 }
