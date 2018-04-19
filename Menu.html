@@ -36,14 +36,13 @@
       </div>
     </header>
     
-		<div class="Chara"> </div>
+		<div class="hamBar">
+        <img class="hamIcon" src="menu.png">
+    </div>
 
-		<div class="videoOpciones">
+    <div class="videoOpciones">
 
-  		<div id="videoImg">  
-      </div>
-
-  			<nav>
+        <nav class="opcionesToggle">
             <h3 id="tittleOpciones">Actions</h3>
 
             <h3 class="opciones" id="linkWatchThem"><a href="#.">Watch Them</a></h3>
@@ -53,30 +52,35 @@
             <h3 class="opciones"><a href="calendar.html">Calendar</a></h3>
 
             <h3 class="opciones"><a href="clean.html">Clean them</a></h3>
-        
         </nav>
 
-  	</div>
-  			
-        <div class="ham">
-          <img src="menu.png" id="menuImg">
+        <div class="opcionesDisponibles">
+            <h3 id="tittleOpciones">Actions</h3>
+
+            <h3 class="opciones" id="linkWatchThem"><a href="#.">Watch Them</a></h3>
+
+            <h3 class="opciones"><a href="food.html">Feed Them</a></h3>
+
+            <h3 class="opciones"><a href="calendar.html">Calendar</a></h3>
+
+            <h3 class="opciones"><a href="clean.html">Clean them</a></h3>
+
         </div>
+        <div class="videoWatchThem">
+            <img src="pecera.jpg">
+        </div>
+    </div>
 
   </div>
 
 	<script>
 		var navopened = false;
-		$('#menuImg').on('click', function(){
+		$('.hamIcon').on('click', function(){
 			$('nav').slideToggle();
 			}, function(){
    			$('nav').slideToggle();
         });
 
-        $('#linkWatchThem').on('click', function(){
-        	$('nav').slideToggle();
-        })
-
-    /*Duda con el wrapper*/
 
     $("#optionHover").on('click', function(){
       $('#panelOpciones').fadeIn();

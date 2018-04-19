@@ -69,9 +69,18 @@ header{
 
 #indexNav{
 	width: 100%;
-	height: 550px;
+	height: 100%;
 	background-color: rgba(35, 93, 255, 0.7);
 	display: none;
+}
+
+.opcionesIndex{
+	color: #fff;
+	font-size: 30px;
+	text-decoration: none;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 10px;
 }
 
 #userName{
@@ -83,13 +92,6 @@ header{
 
 .zelda{
 	color: white;
-	text-decoration: none;
-	background-color: transparent;
-}
-
-.aquiToy{
-	color: white;
-	border-top: 2px solid white;
 	text-decoration: none;
 	background-color: transparent;
 }
@@ -115,7 +117,8 @@ header{
 
 h1{
 	color: #235dff;
-	font-size: 50px;
+	font-size: 40px;
+	margin: 20px 0 -3px 0;
 	padding-top: 50px;
 	margin-bottom: 30px;
 	text-align: center;
@@ -195,7 +198,7 @@ input{
 
 .welcome{
 	width: 100%;
-	height: 500px;
+	height: 100%;
 	background-color: #FFF;
 	/*margin-top: -18px;*/
 }
@@ -213,7 +216,7 @@ h2{
 #LogIn{
 	float: right;
 	width: 50%;
-	height: 386px;
+	height: 100%;
 	margin-top: -200px;
 }
 
@@ -299,7 +302,7 @@ h2{
 
 #explicacionEye{
 	width: 100%;
-	height: 250px;
+	height: 100%;
 	background-color: #fff;
 }
 
@@ -316,43 +319,37 @@ h2{
 
 #explicacionComida{
 	width: 100%;
-	height: 250px;
+	height: 100%;
 	background-color: #fff;
 	display: none;
 }
 
 #explicacionCamara{
 	width: 100%;
-	height: 250px;
+	height: 100%;
 	background-color: #fff;
 	display: none;
 }
 
 #explicacionCalendar{
 	width: 100%;
-	height: 250px;
+	height: 100%;
 	background-color: #fff;
 	display: none;
 }
 
 #explicacionBroom{
 	width: 100%;
-	height: 250px;
+	height: 100%;
 	background-color: #fff;
 	display: none;
 }
 
 #explicacionNotificacion{
 	width: 100%;
-	height: 250px;
+	height: 100%;
 	background-color: #fff;
 	display: none;
-}
-
-.sell{
-	width: 100%;
-	height: 100px;
-	background-color: #fff;
 }
 
 #nameD{
@@ -362,67 +359,74 @@ h2{
 	float: left;
 }
 
+.credits{
+	width: 100%;
+	height: 120px;
+	background-color: #fff;
+}
 
-#botonD{
-	background-color: #235dff;
-	font-size: 20px;
-	text-align: center;
-	height: 50px;
-	width: 200px;
-	margin: 20px 0 0 45%;
-	color: white;
-	border-radius: 20px;
-	float: left;
+.tituloCreditos{
+	color: #6c6c6c;
+	text-decoration: underline;
+	padding: 15px 0 15px 20px;
+}
+
+.textoCreditos{
+	color: #6c6c6c;
+	padding: 0px 0 7px 40px;
 }
 
 .videoOpciones{
 	width: 100%;
-	height: 745px;
-	background-color: #fff;
+	height: 800px;
 }
 
-#videoImg{
-	width: 100%;
+.opcionesToggle{
+	display: none;
+}
+
+
+.opcionesDisponibles{
+	width: 35%;
 	height: 100%;
-	background-image: url('pecera.jpg');
-}
-
-#videoImg img{
-	margin-left: 30%;
-	width: 70%;
-	height: 770px;
-}
-
-nav{
-	width: 100%;
-	height: 20%;
-	margin-top: -745px;
-	background-color: rgba(35, 93, 255, 0.7);
-	display: block;
-	bottom: 0;
+	background-color: rgba(0, 0, 225, 0.5);
+	float: left;
 }
 
 #tittleOpciones{
-	padding-top: 10%;
-	padding-bottom: 3%;
+	font-size: 50px;
 	color: #fff;
+	text-decoration: underline;
 	text-align: center;
-	font-size: 60px;
-	text-decoration: underline overline;
+	padding-top: 12%;
 }
 
 .opciones{
-	padding-top: 20%;
-	color: #fff;
+	font-size: 30px;
 	text-align: center;
-	font-size: 40px;
+	padding: 12% 0;
 }
 
 .opciones a{
 	color: #fff;
 	text-decoration: none;
-	margin:;
 }
+
+.videoWatchThem{
+	width: 100%;
+	height: 100%;
+}
+
+.videoWatchThem img{
+	width: 65%;
+	height: 100%;
+}
+
+.hamBar{
+	display: none;
+}
+
+/*********************************************************/
 
 .link{
 	color: #fff;
@@ -436,18 +440,6 @@ nav{
 	margin: 0 auto;
 }
 
-.ham{
-	width: 100%;
-	height: 50px;
-	background-color: #235dff;
-	display: none;
-}
-
-#menuImg{
-	height: 40px;
-	margin-left: 45%;
-	margin-top: 5px;
-}
 
 /*************************************/
 /**									**/
@@ -467,9 +459,10 @@ nav{
 }
 
 #newName{
-	width: 350px;
-	height: 100px;
-	padding: 1% 0 0 30%;
+	width: 25%;
+	height: 60%;
+	display: block;
+	margin: 0 auto;
 }
 
 #nuevoLogo{
@@ -516,7 +509,7 @@ nav{
 .social{
 	width: 25px;
 	float: left;
-	padding: 110px 1% 0 1%;
+	padding: 0px 1% 0 1%;
 }
 
 .socialIndex{
@@ -828,8 +821,9 @@ input:checked + .slider:before {
 	#newName{
 		width: 350px;
 		height: 100px;
+		display: block;
 		margin: 0 auto;
-		margin-left: -88px;
+		padding: 0;
 	}
 
 	.videoOpciones{
@@ -848,15 +842,6 @@ input:checked + .slider:before {
 		width: 100%;
 		height: 100%;
 		/*display: none;*/
-	}
-
-	nav{
-		width: 100%;
-		height: 720px;
-		margin-top: -720px;
-		background-color: rgba(35, 93, 255, 0.7);
-		display: none;
-		bottom: 0;
 	}
 
 	#tittleOpciones{
@@ -885,7 +870,8 @@ input:checked + .slider:before {
 
 	#menuImg{
 		height: 40px;
-		margin-left: 48%;
+		display: block;
+		margin: 0 auto;
 		margin-top: 5px;
 	}
 
@@ -1072,7 +1058,7 @@ input:checked + .slider:before {
 	#LogIn{
 		float: none;
 		width: 100%;
-		height: 386px;
+		height: 100%;
 		margin-top: 0;
 
 	}
@@ -1105,11 +1091,287 @@ input:checked + .slider:before {
 		width: 50%;
 		height: 60%;
 		margin: 0 auto; 
+		margin-left: -15px;
 	}
 
 	#eye{
 		height: 100px;
-		padding-left: 22%;
+		/*margin: 8% 0 0 13%;*/
+		margin: 0 auto;
+		margin-top: 8%;
+		margin-left: 12%;
+		padding: 0;
+	}
+
+	#fotos{
+		margin-top: -15px;
+	}
+
+	.main{
+		width: 100%;
+		height: 620px;
+		background-color: #fff;
+	}
+
+	.tittle{
+		font-size: 40px;
+		color: #235dff;
+		padding: 20px 0 5px 0;
+		text-align: center;
+	}
+
+	.text{
+		font-size: 20px;
+		padding: 20px 0 20px 0;
+		text-align: center;
+	}
+}
+
+@media screen and (max-width:500px){
+
+	/***************************/
+	/*							*/
+	/*	responsive celular		*/
+	/*		header sin nombre	*/
+	/*							*/
+	/****************************/
+
+	#newWrapper{
+    	width: 100%;
+    }
+
+    #newHeader{
+		width: 100%;
+		height: 120px;
+		background-color: #fdfdfd;
+    }
+
+    #newUserName{
+		display: none;
+	}
+
+	#log-out{
+		display: none;
+	}
+
+	#name{
+		width: 60%;
+		height: 70%;
+		padding: 0;
+		margin: 0 auto;
+		display: block;
 		padding-top: 5%;
 	}
+
+	#newName{
+		width: 60%;
+		height: 70%;
+		padding: 0;
+		margin: 0 auto;
+		display: block;
+		padding-top: 5%;
+	}
+
+	.socialIndex{
+		display: none;
+	}
+
+	.social{
+		display: none;
+	}
+
+	/***************************/
+	/*							*/
+	/*	responsive celular		*/
+	/*		Index.html			*/
+	/*							*/
+	/****************************/
+
+	h2{
+		display: none;
+	}
+
+	.newLogo{
+		display: none;
+	}
+
+	#welcome{
+	
+
+	}
+
+	ul{
+		display: none;
+	}
+
+	#mainM{
+		width: 100%;
+		height: 33px;
+		background-color: #235dff;
+	}
+
+	#hamIndex{
+		display: block;
+		height: 27px;
+		width: 30px;
+		margin: 0 auto;
+		padding-top: 3px;
+	}
+
+	.opcionesIndex{
+		color: #fff;
+		font-size: 20px;
+		text-decoration: none;
+		text-align: center;
+		padding-top: 20px;
+		padding-bottom: 10px;
+	}
+
+
+	h1{
+		color: #235dff;
+		font-size: 30px;
+		padding-top: 25px;
+		margin-bottom: 20px;
+		text-align: center;
+		font-family: 'Roboto', sans-serif;
+	}
+
+	.homeI{
+		margin-bottom: 25px;
+		margin-top: 0;	
+	}
+
+	input{
+		width: 80%;
+		display: block;
+		margin: 0 auto;
+	}
+
+	.hPara{
+		font-size: 25px;
+		margin-left: 25px;
+		margin-right: 25px;
+		font-weight: bold;
+		font-family: 'Roboto Condensed', sans-serif;
+		color: #235dff;
+	}
+
+	.hParaE{
+		padding-top: 25%;
+		text-align: center;
+		font-size: 30px;
+		font-weight: bold;
+		font-family: 'Roboto Condensed', sans-serif;
+		color: #235dff;
+
+	}
+
+	.box{
+		width: 30%;
+		height: 150px;
+		box-shadow: 0 0px 12px rgba(0, 0, 0, 0.7);
+		margin-left: 2.3%;
+		float: left;
+		text-align: center;
+	}
+
+	.boxImg{
+		display: none;
+	}
+
+	#eye{
+		display: none;
+	}
+
+	.main{
+		width: 100%;
+		height: 500px;
+		background-color: #fff;
+	}
+
+	.tittle{
+		font-size: 40px;
+		color: #235dff;
+		padding: 20px 0 5px 0;
+		text-align: center;
+	}
+
+	.text{
+		font-size: 20px;
+		padding: 20px 0 20px 0;
+		text-align: center;
+	}
+
+	#phone{
+		margin: 0 10px 0 10px;
+	}
+
+	/***************************/
+	/*							*/
+	/*	responsive celular		*/
+	/*		Index.html			*/
+	/*							*/
+	/****************************/
+
+	.videoOpciones{
+		width: 100%;
+		height: 650px;
+	}
+
+	.opcionesDisponibles{
+		display: none;
+	}
+
+	#tittleOpciones{
+		font-size: 60px;
+		color: #fff;
+		text-decoration: underline;
+		text-align: center;
+		padding-top: 5%;
+		padding-bottom: 5%;
+	}
+
+	.opciones{
+		font-size: 30px;
+		text-align: center;
+		padding: 4% 0;
+	}
+
+	.opciones a{
+		color: #fff;
+		text-decoration: none;
+	}
+
+	.videoWatchThem{
+		width: 100%;
+		height: 100%;
+		background-image: url('phoneWallpaper.jpg');
+	}
+
+	.videoWatchThem img{
+		display: none;
+	}
+
+	.opcionesToggle{
+		width: 100%;
+		height: 400px;
+		background-color: rgba(35, 93, 255, 0.7);
+		float: left;
+	}
+
+	.hamBar{
+		width: 100%;
+		height: 50px;
+		display: block;
+		background-color: #235dff;
+	}
+
+	.hamBar img{
+		height: 40px;
+		padding: 5px 0;
+		display: block;
+		margin: 0 auto;
+	}
+
 }

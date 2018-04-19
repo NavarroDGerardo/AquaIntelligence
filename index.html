@@ -22,7 +22,7 @@
 		<div id="mainM">
 
 			<ul>
-				<li class="mainBar"><a href="index.html" class="aquiToy">Home</li>
+				<li class="mainBar"><a href="index.html" class="zelda">Evaluation</li>
 				<li class="mainBar"><a target="_blank" href="about.pdf" class="zelda">About</li>
 				<li class="mainBar"><a target="_blank" href="Rq.pdf" class="zelda">Requirements</a></li>
 				<li class="mainBar"><a target="_blank" href="https://marvelapp.com/611f31b/screen/39066284" class="zelda">Marvel app </a></li>
@@ -33,7 +33,11 @@
 		</div>
 
 		<div id="indexNav">
-        
+        	<h4 class="opcionesIndex">Evaluation</h4>
+			<h4 class="opcionesIndex">About</h4>
+			<h4 class="opcionesIndex">Requirements</h4>
+			<h4 class="opcionesIndex">Marvel app</h4>
+			<h4 class="opcionesIndex">Personas</h4>
         </div>
 
 		<div class="welcome">
@@ -42,11 +46,9 @@
 			<img class="newLogo" src="Logo.png">
 
 			<div id="LogIn">
-				<h1 style="font-size: 40px; margin: 20px 0 -3px 0">Log in</h1>
-				<br>
+				<h1>Log in</h1>
 				<hr>
-				<br>
-				<input class="homeI" type="email" placeholder="Email" name="username" size="30" maxlength="20" required="">
+				<input class="homeI" type="email" placeholder="Email" name="username" size="50" maxlength="20" required="">
 				<br>
 				<input class="homeI" type="password" placeholder="Password" name="username" size="30" maxlength="20" required="">
 				<br>
@@ -60,40 +62,39 @@
 
 		<div class="main">
 			<p class="hPara">The technology for taking care of your fish</p>
-			<br>
 			<hr>
-				<a href="#." data-var="#explicacionEye">
-				<div class="box">
-					<p class="hParaE"> Watch them</p>
-					<img src="eye.png" id="eye">
-				</div>
+				<a href="#explicacionEye" data-var="#explicacionEye">
+					<div class="box">
+						<p class="hParaE"> Watch them</p>
+						<img src="eye.png" id="eye">
+					</div>
 				</a>
-				<a href="#." data-var="#explicacionComida">
-				<div class="box">
-					<p class="hParaE"> Feed them </p>
-					<img src="comida.png" class="boxImg">
-				</div>
+				<a href="#explicacionComida" data-var="#explicacionComida">
+					<div class="box">
+						<p class="hParaE" id="phone"> Feed them </p>
+						<img src="comida.png" class="boxImg">
+					</div>
 				</a>
-				<a href="#." data-var="#explicacionCamara">
-				<div class="box">
-					<p class="hParaE"> Take some photos </p>
-					<img src="camara.jpg" class="boxImg">
-				</div>
+				<a href="#explicacionCamara" data-var="#explicacionCamara">
+					<div class="box">
+						<p class="hParaE" id="fotos"> Take some photos </p>
+						<img src="camara.jpg" class="boxImg">
+					</div>
 				</a>
 			<hr>
-				<a href="#." data-var="#explicacionCalendar">
-				<div class="box">
-					<p class="hParaE"> Set the day </p>
-					<img src="calendar.png" class="boxImg">
-				</div>
+				<a href="#explicacionCalendar" data-var="#explicacionCalendar">
+					<div class="box">
+						<p class="hParaE"> Set the day </p>
+						<img src="calendar.png" class="boxImg">
+					</div>
 				</a>
-				<a href="#." data-var="#explicacionBroom">
-				<div class="box">
-					<p class="hParaE"> Clean them</p>
-					<img src="broom.png" class="boxImg">
-				</div>
+				<a href="#explicacionBroom" data-var="#explicacionBroom">
+					<div class="box">
+						<p class="hParaE"> Clean them</p>
+						<img src="broom.png" class="boxImg">
+					</div>
 				</a>
-				<a href="#." data-var="#explicacionNotificacion">
+				<a href="#explicacionNotificacion" data-var="#explicacionNotificacion">
 				<div class="box">
 					<p class="hParaE">don't forget</p>
 					<img src="notification.png" class="boxImg">
@@ -147,10 +148,12 @@
 
 		<div class="Chara">	</div>
 
-		<div class="sell">
-			<a href="#"><button id="botonD">Buy</button></a>
+		<div class="credits">
+			<h4 class="tituloCreditos">Designed by:</h4>
+			<h4 class="textoCreditos">Navarro D. Gerarfo</h4>
+			<h4 class="textoCreditos">Rodrigo Medina Neri</h4>
+			<h4 class="textoCreditos">Sofía Mónica Cortez Gómez</h4>
 		</div>
-
 	</div>
 
 	<script>
@@ -161,6 +164,11 @@
 			$('.expli').hide();
 			$(data).fadeIn();
 		})
+
+		var navopened = false;
+        $('#hamIndex').on('click', function(){
+            $('#indexNav').slideToggle();
+        });
 
 	</script>
 </body>
