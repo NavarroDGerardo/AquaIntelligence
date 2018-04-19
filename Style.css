@@ -1,0 +1,1109 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body{
+	font-family: 'Roboto', sans-serif;
+	background-color: #f1f1f1;
+}
+
+#wrapper{
+	margin: 0 auto;
+	width: 1000px;
+	height: 100%;
+	box-shadow: 0 0px 12px rgba(0, 0, 0, 0.7);
+}
+
+header{
+	width: 1000px;
+	height: 150px;
+	background-color: #fdfdfd;
+}
+
+#name{
+	width: 350px;
+	height: 100px;
+	padding: 3% 0 0 30%;
+}
+
+#logo{
+	width: 100px;
+	height: 100px;
+}
+
+#mainM{
+	width: 100%;
+	height: 45px;
+	background-color: #235dff;
+}
+
+.mainBar {
+    float: left;
+    list-style: none;
+    margin-top: 11px;
+    font-size: 20px;
+    margin-left: 12%;
+    color: white;
+}
+
+#hamIndex{
+	display: none;
+}
+
+#indexNav{
+	width: 100%;
+	height: 550px;
+	background-color: rgba(35, 93, 255, 0.7);
+	display: none;
+}
+
+#userName{
+	float: left;
+    font-size: 20px;
+    margin: 11px 35% 0 8.5%;
+    color: white;
+}
+
+.zelda{
+	color: white;
+	text-decoration: none;
+	background-color: transparent;
+}
+
+.aquiToy{
+	color: white;
+	border-top: 2px solid white;
+	text-decoration: none;
+	background-color: transparent;
+}
+
+#fishT{
+	width: 100%;
+	height: 100%;
+	background-image: url('menuP.jpg');
+}
+
+#fishT img{
+	width: 50%;
+	height: 1000px;
+}
+
+#signUp{
+	margin: 0 auto;
+	width: 50%;
+	height: 735px;
+	background-color: #fdfdfd;
+
+}
+
+h1{
+	color: #235dff;
+	font-size: 50px;
+	padding-top: 50px;
+	margin-bottom: 30px;
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+}
+
+hr{
+	margin-bottom: 30px;
+	width: 80%;
+}
+
+input{
+	margin-bottom: 50px;
+	margin-top: 20px;
+	height: 30px;
+	width: 60%;
+	font-size: 20px;
+	text-align: center;
+	margin-left: 20%;
+}
+
+#boton{
+	background-color: #235dff;
+	font-size: 20px;
+	text-align: center;
+	margin-left: 20%;
+	margin-bottom: 30px;
+	height: 40px;
+	width: 60%;
+	color: white;
+	border-radius: 20px;
+}
+
+#botonMenuP{
+	background-color: #235dff;
+	font-size: 20px;
+	text-align: center;
+	margin-left: 20%;
+	margin-bottom: 30px;
+	margin-top: 30px;
+	height: 40px;
+	width: 60%;
+	color: white;
+	border-radius: 20px;
+}
+
+#botones{
+	background-color: #235dff;
+	font-size: 18px;
+	text-align: center;
+	height: 60px;
+	width: 300px;
+	color: white;
+	border-radius: 20px;
+	list-style: none;
+}
+
+.listaBotones {
+    list-style: none;
+    padding: 9% 0 0 10%;
+
+}
+
+.mPara{
+	text-align: center;
+	font-family: 'Roboto Condensed', sans-serif;
+	margin: 0 0 15px 0;
+
+}
+
+.newLogo{
+	width: 300px;
+	height: 300px;
+	margin-left: 15.3%;
+	margin-top: -25px;
+}
+
+.welcome{
+	width: 100%;
+	height: 500px;
+	background-color: #FFF;
+	/*margin-top: -18px;*/
+}
+
+h2{
+	color: #235dff;
+	font-size: 50px;
+	padding-top: 5%;
+	padding-bottom: 3%;
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	width: 50%;
+}
+
+#LogIn{
+	float: right;
+	width: 50%;
+	height: 386px;
+	margin-top: -200px;
+}
+
+
+.homeI{
+	margin-top: -15px;
+	margin-bottom: 80px;
+}
+
+.Chara{
+	width: 100%;
+	height: 10px;
+	background-color: #235dff;
+}
+
+.Cha{
+	color: white;
+	font-size: 50px;
+	font-family: 'Roboto Condensed', sans-serif;
+	margin-left: 330px;
+
+}
+
+.main{
+	width: 100%;
+	height: 820px;
+	background-color: #fff;
+}
+
+
+
+.imagenPez{
+	height: 300px;
+	width: 50%;
+	float: left;
+}
+
+.hPara{
+	text-align: center;
+	padding-top: 3%;
+	padding-bottom: 2%;
+	font-size: 40px;
+	font-weight: bold;
+	font-family: 'Roboto Condensed', sans-serif;
+	color: #235dff;
+}
+
+.imagenPezE{
+	width: 100%;
+	height: 500px;
+}
+
+.box{
+	width: 30%;
+	height: 300px;
+	box-shadow: 0 0px 12px rgba(0, 0, 0, 0.7);
+	margin-left: 25px;
+	float: left;
+}
+
+.hParaE{
+	padding-top: 10%;
+	text-align: center;
+	font-size: 30px;
+	font-weight: bold;
+	font-family: 'Roboto Condensed', sans-serif;
+	color: #235dff;
+
+}
+
+.boxImg{
+	width: 150px;
+	height: 180px;
+	padding-left: 34%; 
+}
+
+
+#eye{
+	height: 150px;
+	padding-left: 22%;
+	padding-top: 5%;
+}
+
+#explicacionEye{
+	width: 100%;
+	height: 250px;
+	background-color: #fff;
+}
+
+.tittle{
+	font-size: 40px;
+	color: #235dff;
+	padding: 20px 0 5px 10px;
+}
+
+.text{
+	font-size: 20px;
+	padding: 20px 0 20px 10px;
+}
+
+#explicacionComida{
+	width: 100%;
+	height: 250px;
+	background-color: #fff;
+	display: none;
+}
+
+#explicacionCamara{
+	width: 100%;
+	height: 250px;
+	background-color: #fff;
+	display: none;
+}
+
+#explicacionCalendar{
+	width: 100%;
+	height: 250px;
+	background-color: #fff;
+	display: none;
+}
+
+#explicacionBroom{
+	width: 100%;
+	height: 250px;
+	background-color: #fff;
+	display: none;
+}
+
+#explicacionNotificacion{
+	width: 100%;
+	height: 250px;
+	background-color: #fff;
+	display: none;
+}
+
+.sell{
+	width: 100%;
+	height: 100px;
+	background-color: #fff;
+}
+
+#nameD{
+	width: 300px;
+	height: 75px;
+	padding: 15px 0 0 50px;
+	float: left;
+}
+
+
+#botonD{
+	background-color: #235dff;
+	font-size: 20px;
+	text-align: center;
+	height: 50px;
+	width: 200px;
+	margin: 20px 0 0 45%;
+	color: white;
+	border-radius: 20px;
+	float: left;
+}
+
+.videoOpciones{
+	width: 100%;
+	height: 745px;
+	background-color: #fff;
+}
+
+#videoImg{
+	width: 100%;
+	height: 100%;
+	background-image: url('pecera.jpg');
+}
+
+#videoImg img{
+	margin-left: 30%;
+	width: 70%;
+	height: 770px;
+}
+
+nav{
+	width: 100%;
+	height: 20%;
+	margin-top: -745px;
+	background-color: rgba(35, 93, 255, 0.7);
+	display: block;
+	bottom: 0;
+}
+
+#tittleOpciones{
+	padding-top: 10%;
+	padding-bottom: 3%;
+	color: #fff;
+	text-align: center;
+	font-size: 60px;
+	text-decoration: underline overline;
+}
+
+.opciones{
+	padding-top: 20%;
+	color: #fff;
+	text-align: center;
+	font-size: 40px;
+}
+
+.opciones a{
+	color: #fff;
+	text-decoration: none;
+	margin:;
+}
+
+.link{
+	color: #fff;
+	font-size: 20px;
+	margin: 0 auto;
+}
+
+.linkWatchThem{
+	color: #fff;
+	font-size: 20px;
+	margin: 0 auto;
+}
+
+.ham{
+	width: 100%;
+	height: 50px;
+	background-color: #235dff;
+	display: none;
+}
+
+#menuImg{
+	height: 40px;
+	margin-left: 45%;
+	margin-top: 5px;
+}
+
+/*************************************/
+/**									**/
+/**		nuevo diseño de la pagina	**/
+/**									**/
+/*************************************/
+
+#newWrapper{
+	width: 1500px;
+	margin: 0 auto;
+}
+
+#newHeader{
+	width: 100%;
+	height: 170px;
+	background-color: #fdfdfd;
+}
+
+#newName{
+	width: 350px;
+	height: 100px;
+	padding: 1% 0 0 30%;
+}
+
+#nuevoLogo{
+	width: 100px;
+	height: 100px;
+}
+
+#newMainM{
+	width: 100%;
+	height: 45px;
+	background-color: #235dff;
+}
+
+#newUserName{
+	float: left;
+    font-size: 20px;
+    margin: 11px 60% 0 5%;
+    color: #235dff;
+}
+
+.newMainBar {
+    float: left;
+    list-style: none;
+    margin-top: 11px;
+    font-size: 20px;
+    margin-left: 5%;
+    color: white;
+    text-decoration: none;
+}
+
+.newZelda{
+	color: #235dff;
+	text-decoration: none;
+	background-color: transparent;
+}
+
+.open{
+	background-color: rgba(0, 0, 70, 0.4);
+	color: #fff;
+	padding-bottom: 4px;
+	padding-right: 5px; 
+}
+
+.social{
+	width: 25px;
+	float: left;
+	padding: 110px 1% 0 1%;
+}
+
+.socialIndex{
+	width: 25px;
+	float: left;
+	padding: 130px 1% 0 1%;
+}
+
+#panelOpciones{
+	width: 250px;
+	height: 180px;
+	background-color: rgba(0, 0, 70, 0.4);
+	position: relative;
+	margin-top: -115px;
+	margin-left: 79.5%;
+	display: none;
+}
+
+
+
+.panelOpcionesHover{
+	color: #fff;
+	text-align: left;
+	font-size: 20px; 
+	margin: 0px 0 20px 10px;
+	text-decoration: none;
+	display: block;
+
+}
+
+.mainOpcion{
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	/*display: none;*/
+}
+
+.crearNuevaOpcion{
+	width: 100%;
+	height: 800px;
+	background-image: url('agua.jpg');
+	display: none;
+}
+
+.tittleOpcionesAntes{
+	font-size: 80px;
+	color: #fff;
+	font-weight: bold;
+	padding: 40px 0 0 40px;
+}
+
+.buttonFeedThem {
+    background-color: #235dff;
+    color: #fff;
+    padding: 30px 80px;
+	margin-left: 0%;
+	font-size: 30px;
+	font-weight: bold;
+	margin: 25px 0 0 34%;
+	border-radius: 50%;
+}
+
+.buttonFeedThem:hover {
+  	background-color: #f0f0f0; 
+    color: #000; 
+    border: 2px solid #000; 
+}
+
+.labelAntes{
+	font-size: 40px;
+	color: #fff;
+	font-weight: bold;
+	padding-top: 40px;
+	padding-left: 40px;
+	text-decoration: underline;
+}
+
+.dias{
+	width: 35%;
+	height: 100%;
+	float: left;
+}
+
+.botonesOpciones{
+	width: 65%;
+	height: 800px;
+	background-image: url('fish.jpg');
+	float: left;
+}
+
+.tittleOpciones{
+	font-size: 50px;
+	color: #fff;
+	font-weight: bold;
+	padding: 20px 0 0 30px;
+}
+
+.opcionesApp{
+	color: #fff;
+	font-size: 30px;
+	padding: 90px 0 10px 80px;
+	display: inline-block;
+}
+
+.button{
+	padding: 15px 80px;
+	display: inline-block;
+	margin-left: 35%;
+	font-size: 20px;
+	font-weight: bold;
+	/*bottom: 0;*/ 
+}
+
+.buttonCharacteristics {
+    background-color: #fff;
+    color: #235dff;
+}
+
+.buttonCharacteristics:hover {
+  	background-color: #f0f0f0; 
+    color: #000; 
+    border: 2px solid #000; 
+}
+
+select{
+  	width: 200px;
+  	height: 34px;
+  	font-size: 15px;
+  	margin-left: 45.5%;
+}
+
+#Amount{
+	width: 200px;
+  	height: 34px;
+  	font-size: 15px;
+  	margin-left: 30%;
+}
+
+#type{
+  	width: 200px;
+  	height: 34px;
+  	font-size: 15px;
+  	margin-left: 50%;
+}
+
+#hour{
+  	width: 200px;
+  	height: 34px;
+  	font-size: 15px;
+  	margin-left: 23.5%;
+}
+
+.masMenos{
+	display: inline-block;
+	margin-left: 30%;
+}
+
+.MenosMasH3{
+	display: inline-block;
+	cursor: pointer;
+	font-size: 30px;
+	font-weight: bold;
+	color: #fff;
+	padding: 10px;
+}
+
+.numero{
+	display: inline-block;
+	cursor: pointer;
+	font-size: 30px;
+	font-weight: bold;
+	color: #fff;
+	margin: 0 15px 0 15px;
+	border: 1px solid #fff;
+	padding: 5px;
+}
+
+.confirmacion{
+	width: 500px;
+	height: 150px;
+	background-color: #33ff00;
+	border: 3px solid #3333fe;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -150px 0 0 -250px;
+	text-align: center;
+	color: #3333fe;
+	font-size: 30px;
+	font-weight: bold;
+	display: none;
+
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-left: 52%; 
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.calendar{
+	width: 100%;
+	height: 769px;
+	background-image: url('reloj.jpg');
+}
+
+#calendarTitle{
+	font-size: 80px;
+	color: #fff;
+	font-weight: bold;
+	padding: 30px 0 0 70px;
+}
+
+.calendarOpciones{
+	font-size: 50px;
+	color: #fff;
+	font-weight: bold;
+	padding: 50px 0 0 200px;
+	text-decoration: underline overline;
+}
+
+.datos{
+	font-size: 30px;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 30px 0 0 0;
+	text-decoration: line-through;
+
+}
+
+.buttonCalendar {
+    background-color: #235dff;
+    color: #fff;
+    padding: 20px 70px;
+	margin-left: 0%;
+	font-size: 30px;
+	margin: 350px 0 0 60%;
+	border-radius: 50%;
+}
+
+.buttonFeedThem:hover {
+  	background-color: #f0f0f0; 
+    color: #000; 
+    border: 2px solid #000; 
+}
+
+@media screen and (max-width:1500px){
+
+    #newWrapper{
+    	width: 100%;
+		margin: 0 auto;
+    }
+
+    #newHeader{
+    	width: 100%;
+    }
+
+    #newUserName{
+	    font-size: 20px;
+	    margin: 11px 70% 0 4%;
+	}
+
+	#log-out{
+		display: none;
+	}
+
+	#newName{
+		width: 350px;
+		height: 100px;
+		margin: 0 auto;
+		margin-left: -88px;
+	}
+
+	.videoOpciones{
+		height: 720px;
+	}
+
+	#videoImg{
+		/*background-image: url('pecera.jpg');*/
+		background-size: 100%;
+		/*background-repeat: no-repeat;*/
+	}
+
+
+	#videoImg img{
+		margin-left: 0;
+		width: 100%;
+		height: 100%;
+		/*display: none;*/
+	}
+
+	nav{
+		width: 100%;
+		height: 720px;
+		margin-top: -720px;
+		background-color: rgba(35, 93, 255, 0.7);
+		display: none;
+		bottom: 0;
+	}
+
+	#tittleOpciones{
+		padding-top: 5%;
+		padding-bottom: 0;
+		color: #fff;
+		text-align: center;
+		font-size: 50px;
+		text-decoration: underline overline;
+	}
+
+	.opciones{
+		padding-top: 7%;
+		color: #fff;
+		text-align: center;
+		font-size: 25px;
+	}
+
+	.ham{
+		width: 100%;
+		height: 50px;
+		background-color: #235dff;
+		display: block;
+		float: left;
+	}
+
+	#menuImg{
+		height: 40px;
+		margin-left: 48%;
+		margin-top: 5px;
+	}
+
+
+/*************************************/
+/**									**/
+/**		Feed them responsive		**/
+/**									**/
+/*************************************/
+
+	.dias{
+		display: none;
+	}
+
+	.botonesOpciones{
+		width: 100%;
+		height: 100%;
+	}
+
+	.tittleOpciones{
+		font-size: 50px;
+		color: #fff;
+		font-weight: bold;
+		padding: 20px 0 0 50%;
+		margin-left: -180px;
+	}
+
+	.masMenos{
+		display: inline-block;
+		margin-left: 40%;
+	}
+
+	#Amount{
+		margin-left: 41.4%;
+	}
+
+	#type{
+		margin-left: 582px;
+	}
+
+	#hour{
+		margin-left: 37%;
+	}
+
+	.switch {
+	  margin-left: 57%; 
+	}
+
+}
+
+@media screen and (max-width:768px){
+
+	/*header de telefonos moviles*/
+
+	#newWrapper{
+    	width: 100%;
+		margin: 0 auto;
+    }
+
+    #newHeader{
+    	width: 100%;
+    }
+
+    #newUserName{
+	    font-size: 20px;
+	    margin: 5px 55% 0 2%;
+	}
+
+	#log-out{
+		display: none;
+	}
+
+	#newName{
+		width: 40%;
+		height: 50%;
+		margin: 0 auto;
+		margin-left: -95px;
+	}
+
+	/*feed them responsive, telefonos*/
+
+	.dias{
+		display: none;
+	}
+
+	.botonesOpciones{
+		width: 100%;
+		height: 100%;
+		text-align: center;
+	}
+
+	.tittleOpciones{
+		font-size: 50px;
+		color: #fff;
+		font-weight: bold;
+		margin-left: 0;
+		padding-left: 0;
+		text-decoration: underline;
+		text-align: center;
+	}
+
+	.opcionesApp{
+		color: #fff;
+		font-size: 30px;
+		padding: 0;
+		padding-top: 30px;
+		padding-bottom: 20px;
+
+	}
+
+	.masMenos{
+		display: block;
+		margin-left: 0;
+	}
+
+	#Amount{
+		display: block;
+		margin-left: 0;
+		margin: 0;
+		margin-left: 35%;
+	}
+
+	#type{
+		display: block;
+		margin-left: 0;
+	}
+
+	#hour{
+		display: block;
+		margin-left: 35%;
+	}
+
+	.switch {
+		display: block;
+		margin-left: 45%; 
+	}
+
+	.button{
+		display: block;
+		margin-left: 20%;
+		bottom: 50px;
+	}
+
+	#panelOpciones{
+		width: 250px;
+		height: 180px;
+		background-color: rgba(0, 0, 70, 0.4);
+		position: relative;
+		margin-top: -92px;
+		margin-left: 62%;
+	}
+
+	.panelOpcionesHover{
+		color: #fff;
+		text-align: left;
+		font-size: 25px; 
+		margin: 0px 0 20px 10px;
+		text-decoration: none;
+		display: block;
+
+	}
+
+	/***************************/
+	/*							*/
+	/*	responsive celular		*/
+	/*		Index.html			*/
+	/*							*/
+	/****************************/
+
+	#name{
+		width: 50%;
+		height: 60%;
+		padding: 5% 0 0 10%;
+	}
+
+	h2{
+		display: none;
+	}
+
+	.newLogo{
+		display: none;
+	}
+
+	#LogIn{
+		float: none;
+		width: 100%;
+		height: 386px;
+		margin-top: 0;
+
+	}
+
+	ul{
+		display: none;
+	}
+
+	#hamIndex{
+		display: block;
+		height: 30px;
+		width: 30px;
+		margin: 0 auto;
+		padding-top: 8px;
+	}
+
+	.welcome{
+		margin-top: -18px;
+	}
+
+	.box{
+		width: 30%;
+		height: 200px;
+		box-shadow: 0 0px 12px rgba(0, 0, 0, 0.7);
+		margin-left: 2.3%;
+		float: left;
+	}
+
+	.boxImg{
+		width: 50%;
+		height: 60%;
+		margin: 0 auto; 
+	}
+}

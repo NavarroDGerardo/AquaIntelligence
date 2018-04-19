@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="Style.css">
+   	<script src="js/jquery-3.1.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300" rel="stylesheet">
+</head>
+<body>
+	<div id="newWrapper">
+		<header id="newHeader">
+			<p id="newUserName">Nombre del usuario</p>
+			<ul>
+				<li class="newMainBar" id="log-out"><a href="index.html" class="newZelda">Log out</a></li>
+				<li class="newMainBar"><a href="#." class="newZelda" id="optionHover">Options</a></li>
+			</ul>
+
+			<img id="newName" src="Name.png">
+			<img class="social" src="facebook.svg">
+			<img class="social" src="instagram.svg">
+			<img class="social" src="pinterest.svg">
+
+			<div id="panelOpciones">
+				<a href="#." class="panelOpcionesHover">change password</a></h3>
+				<a href="#." class="panelOpcionesHover">change font color</a></h3>
+				<a href="#." class="panelOpcionesHover">change name</a></h3>
+				<a href="index.html" class="panelOpcionesHover">log out</a></h3>
+
+			</div>
+		</header>
+
+		<div class="Chara">	</div>
+
+		<div class="calendar">
+			<h3 id="calendarTitle">Calendar</h3>
+			<h3 class="calendarOpciones">Dates</h3>
+			<h4 class="datos">No se ha creado ninguna fecha</h4>
+
+			<button class="buttonCalendar">Create new Calendar</button>
+		</div>
+
+	</div>
+
+	<script>
+
+            $("#optionHover").on('click', function(){
+            	$('#panelOpciones').fadeIn();
+            	$('#optionHover').addClass('open');
+            })
+	</script>
+</body>
+</html>

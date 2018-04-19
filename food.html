@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="Style.css">
+   	<script src="js/jquery-3.1.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300" rel="stylesheet">
+</head>
+<body>
+	<div class="confirmacion">
+		<br>
+		se alimento exitosamente a tus peces
+	</div>
+
+	<div id="newWrapper">
+		<header id="newHeader">
+			<p id="newUserName">Nombre del usuario</p>
+			<ul>
+				<li class="newMainBar" id="log-out"><a href="index.html" class="newZelda">Log out</a></li>
+				<li class="newMainBar"><a href="#." class="newZelda" id="optionHover">Options</a></li>
+			</ul>
+
+			<img id="newName" src="Name.png">
+			<img class="social" src="facebook.svg">
+			<img class="social" src="instagram.svg">
+			<img class="social" src="pinterest.svg">
+
+			<div id="panelOpciones">
+				<a href="#." class="panelOpcionesHover">change password</a></h3>
+				<a href="#." class="panelOpcionesHover">change font color</a></h3>
+				<a href="#." class="panelOpcionesHover">change name</a></h3>
+				<a href="index.html" class="panelOpcionesHover">log out</a></h3>
+
+			</div>
+		</header>
+		
+		<div class="Chara">	</div>
+
+		<div class="crearNuevaOpcion">
+			<h3 class="tittleOpcionesAntes">Feed them</h3>
+
+			<button class="buttonFeedThem">Create new Food buttom</button>
+
+			<h3 class="labelAntes">Peceras creadas</h3>
+
+
+		</div>
+
+		<div class="mainOpcion">
+
+			<div class="dias">
+				<br><br><br><br><hr>
+				<br><br><br><br><hr>
+				<br><br><br><br><hr>
+				<br><br><br><br><hr>
+				<br><br><br><br><hr>
+				<br><br><br><br><hr>
+			</div>
+			
+			<div class="botonesOpciones">
+				<h3 class="tittleOpciones">Feed them</h3>
+
+				<h4 class="opcionesApp">Number of fishes that you own: </h4>
+				<div class="masMenos">
+					<h3 class="MenosMasH3" id="less">
+						-
+					</h3>
+					<h3 class="numero">
+						1
+					</h3>
+					<h3 class="MenosMasH3" id="more">
+						+
+					</h3>
+
+				</div>
+
+
+				<h4 class="opcionesApp">Amount of portions of food: </h4>
+				<select id="Amount">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="+10">+10</option>
+				</select>
+
+				<h4 class="opcionesApp">hours before we give food again:</h4>
+				<select id="hour">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+					<option value="15">15</option>
+					<option value="16">16</option>
+					<option value="17">17</option>
+					<option value="18">18</option>
+					<option value="19">19</option>
+					<option value="20">20</option>
+					<option value="21">21</option>
+					<option value="22">22</option>
+					<option value="23">23</option>
+					<option value="24">24</option>
+				</select>
+
+
+				<h4 class="opcionesApp">Get notifications</h4>
+				<label class="switch">
+				  <input type="checkbox">
+				  <span class="slider"></span>
+				</label>
+
+				<br><br><br><br><br><br>
+
+				<button class="button buttonCharacteristics" id="create">Create new Food buttom</button>
+			</div>
+		</div>
+	</div>
+
+	<script>
+
+			$('.buttonFeedThem').on('click', function(){
+				$('.crearNuevaOpcion').hide();
+				$('.mainOpcion').show();
+			})
+
+			$('#create').on('click', function(){
+				$('.mainOpcion').hide();
+				$('.crearNuevaOpcion').show();
+			})
+
+		var peces = 1;
+		var i= 2;
+
+            $('#less').on('click', function(){
+    			if(peces >= 2){
+                	peces = peces -1;
+                	$('.numero').text("");
+                	$('.numero').text(peces);
+            	}else{
+            		alert("ya no se puede reducir el numero de peces");
+            	}
+            });
+
+            $('#more').on('click', function(){
+                peces = peces +1;
+                $('.numero').text("");
+                $('.numero').text(peces);
+            });
+
+            var optionHoveropened = false;
+            $("#optionHover").on('click', function(){
+            	$('#panelOpciones').fadeIn();
+            	$('#optionHover').addClass('open');
+            }, function(){
+            	$('#panelOpciones').fadeOut();
+            	$('#optionHover').removeClass('open');
+            })
+	</script>
+
+</body>
+</html>
