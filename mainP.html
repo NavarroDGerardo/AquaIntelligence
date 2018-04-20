@@ -72,7 +72,10 @@
 				users = []
 			}
 
-			if(isEmailValid(users, email)==0){
+			if(isEmailValid(users, email)==0
+			&& name != ''
+			&& email != ''
+			&& pswd != ''){
 				
 				users.push({
 					name: name,
@@ -87,7 +90,7 @@
 				alert('Usuario creado!')
 
 			}else{
-				alert('ERROR Ya existe este usuario')
+				alert('ERROR Ya existe este usuario o los campos están vacíos')
 			}
 
 			console.log(`${JSON.stringify(users)}`)
