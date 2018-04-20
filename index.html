@@ -7,6 +7,7 @@
     <title></title>
     <link rel="stylesheet" type="text/css" href="Style.css">
    	<script src="js/jquery-3.1.1.min.js"></script>
+   	<script src="js/store.everything.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300" rel="stylesheet">
 
@@ -52,7 +53,7 @@
 				<br>
 				<input class="homeI" type="password" placeholder="Password" name="username" size="30" maxlength="20" required="">
 				<br>
-				<a href="Menu.html"><button class="homeI" id="boton">Enter</button></a>
+				<button class="homeI" id="boton">Enter</button>
 				<p class="mPara">Create an account <a href="mainP.html">Sign up</a></p>
 			</div>
 
@@ -157,7 +158,7 @@
 	</div>
 
 	<script>
-		
+
 		$('a').on('click', function(){
 			var data = $(this).data("var");
 
