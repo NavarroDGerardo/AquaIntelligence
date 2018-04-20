@@ -544,14 +544,14 @@ h2{
 	width: 100%;
 	height: 100%;
 	background-color: #fff;
-	/*display: none;*/
+	display: none;
 }
 
 .crearNuevaOpcion{
 	width: 100%;
 	height: 800px;
 	background-image: url('agua.jpg');
-	display: none;
+	/*display: none;*/
 }
 
 .tittleOpcionesAntes{
@@ -620,7 +620,6 @@ h2{
 	margin-left: 35%;
 	font-size: 20px;
 	font-weight: bold;
-	/*bottom: 0;*/ 
 }
 
 .buttonCharacteristics {
@@ -989,19 +988,17 @@ input:checked + .slider:before {
 
 	#Amount{
 		display: block;
-		margin-left: 0;
-		margin: 0;
-		margin-left: 35%;
+		margin: 0 auto;
 	}
 
 	#type{
 		display: block;
-		margin-left: 0;
+		margin: 0 auto;
 	}
 
 	#hour{
 		display: block;
-		margin-left: 35%;
+		margin: 0 auto;
 	}
 
 	.switch {
@@ -1374,4 +1371,66 @@ input:checked + .slider:before {
 		margin: 0 auto;
 	}
 
+	/***************************/
+	/*							*/
+	/*	responsive celular		*/
+	/*		food.html			*/
+	/*							*/
+	/****************************/
+
+	.button{
+		padding: 15px 40px;
+		display: block;
+		margin: 30px auto;
+		font-size: 20px;
+		font-weight: bold;
+	}
+
+	.crearNuevaOpcion{
+		width: 100%;
+		height: 678px;
+		background-image: none;
+		background: linear-gradient(#235dff, #000); 
+	}
+
+	.tittleOpcionesAntes{
+		font-size: 60px;
+		color: #fff;
+		font-weight: bold;
+		padding: 15px 0;
+		text-align: center;
+	}
+
+	.buttonFeedThem {
+	    background-color: #e5e5e5;
+	    color: #000;
+	    padding: 15px 0;
+	    text-align: center;
+		margin-left: 0%;
+		border-radius: 0;
+		display: block;
+		margin: 0 auto;
+	}
+
+	.buttonFeedThem:hover {
+	  	background-color: #f0f0f0; 
+	    color: #000; 
+	    border: 2px solid #000; 
+	}
+
+	.labelAntes{
+		font-size: 40px;
+		color: #fff;
+		font-weight: bold;
+		padding-top: 40px;
+		padding-left: 40px;
+		text-decoration: underline;
+	}
+
+	/***************************/
+	/*							*/
+	/*	responsive celular		*/
+	/*		food.html			*/
+	/*							*/
+	/****************************/
 }
