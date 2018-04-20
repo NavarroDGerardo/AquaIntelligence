@@ -38,7 +38,17 @@
 		<div class="calendar">
 			<h3 id="calendarTitle">Calendar</h3>
 			<h3 class="calendarOpciones">Dates</h3>
-			<h4 class="datos">No se ha creado ninguna fecha</h4>
+			<div id="calendarButtonsContainer">
+				<h4 class="datos">No se ha creado ninguna fecha</h4>
+				<!-- <button>Cosa 1</button><br>
+				<button>Cosa 1</button><br>
+				<button>Cosa 1</button><br>
+				<button>Cosa 1</button><br>
+				<button>Cosa 1</button><br>
+				<button>Cosa 1</button><br>
+				<button>Cosa 1</button><br>
+				<button>Cosa 1</button><br> -->
+			</div>
 
 			<button class="buttonCalendar">Create new Calendar</button>
 		</div>
@@ -136,7 +146,7 @@
 			var username = store.get('actualUserName')
 			console.log(username)
 			$('#newUserName').text("Bienvenido " + username + "!")
-
+			fillCalendarButtonsContainer()
 		});
 
 		$('.buttonCalendar').on('click', function(){
@@ -145,9 +155,40 @@
 		})
 
 		$('.buttonCalendar2').on('click', function(){
+
+			var month = $('#calendarMonth').val()
+			var day = $('#calendarDay').val()
+			var hour = $('#calendarHour').val()
+
+			var calendarButtons = store.get('calendarButtons')
+			if(calendarButtons == undefined){
+				calendarButtons = []
+			}
+
+			calendarButtons.push({
+				month:month,
+				day:day,
+				hour:hour
+			})
+
+			store.set('calendarButtons', calendarButtons)
+			fillCalendarButtonsContainer()
+
 			$('.calendar2').hide();
 			$('.calendar').show();
 		})
+
+		function fillCalendarButtonsContainer(){
+			var calendarButtons = store.get('calendarButtons')
+			if(calendarButtons != undefined){
+				$('#calendarButtonsContainer').html('')
+				for(calendarButton in calendarButtons){
+					$('#calendarButtonsContainer').append('<button>Calendario ' + calendarButton + '</button><br>')
+
+				}
+				
+			}
+		}
 
 		$("#optionHover").on('click', function(){
 			$('#panelOpciones').fadeIn();
