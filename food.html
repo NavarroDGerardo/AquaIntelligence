@@ -13,7 +13,7 @@
 <body>
 	<div class="confirmacion">
 		<br>
-		se alimento exitosamente a tus peces
+		Se alimentó exitosamente a tus peces
 	</div>
 
 	<div id="newWrapper">
@@ -46,6 +46,17 @@
 			<button class="buttonFeedThem">Create new Food button</button>
 
 			<h3 class="labelAntes">Peceras creadas</h3>
+
+			<div id="feedButtonsContainer">
+				<!-- <button>Cosa 1</button><br>
+				<button>Cosa 1</button><br>
+				<button>Cosa 1</button><br>
+				<button>Cosa 1</button><br>
+				<button>Cosa 1</button><br>
+				<button>Cosa 1</button><br>
+				<button>Cosa 1</button><br> -->
+			</div>
+
 		</div>
 
 		<div class="mainOpcion">
@@ -133,11 +144,15 @@
 
 	<script>
 
+		var peces = 1;
+		var i = 2;
+
 		$(document).ready(function () {
 
 			var username = store.get('actualUserName')
 			console.log(username)
 			$('#newUserName').text("Bienvenido " + username + "!")
+			fillFeedButtonsContainer()
 
 		});
 
@@ -147,12 +162,47 @@
 		})
 
 		$('#create').on('click', function(){
+			console.log("Aqui merengues carnal")
+
+			var numPeces = peces
+			var portions = $("#Amount").val()
+			var hours = $("#hour").val()
+
+			console.log(numPeces)
+			console.log(portions)
+			console.log(hours)
+
+			var foodButtons = store.get('foodButtons')
+			if(foodButtons == undefined){
+				foodButtons = []
+			}
+
+			foodButtons.push({
+				numPeces:peces,
+				portions:portions,
+				hours:hours
+			})
+
+			store.set('foodButtons', foodButtons)
+
+			fillFeedButtonsContainer()
+
 			$('.mainOpcion').hide();
 			$('.crearNuevaOpcion').show();
 		})
 
-		var peces = 1;
-		var i= 2;
+		function fillFeedButtonsContainer(){
+			var foodButtons = store.get('foodButtons')
+			if (foodButtons != undefined) {
+				$('#feedButtonsContainer').html('')
+				for(foodButton in foodButtons){
+
+					$('#feedButtonsContainer').append('<button>Pecera '+foodButton+'</button><br>')
+
+				}
+				
+			}
+		}
 
 		$('#less').on('click', function(){
 			if(peces >= 2){
