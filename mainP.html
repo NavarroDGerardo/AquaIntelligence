@@ -69,7 +69,6 @@
 			
 			var users = store.get('users')
 			if(users == undefined ){
-				console.log("undefined cosa")
 				users = []
 			}
 
@@ -87,7 +86,7 @@
 				alert('Usuario creado!')
 
 			}else{
-				alert('Ya existe este usuario')
+				alert('ERROR Ya existe este usuario')
 			}
 
 			console.log(`${JSON.stringify(users)}`)
@@ -99,7 +98,6 @@
 				return user.email === email
 			})
 
-			console.log(JSON.stringify(equalUsers))
 			return equalUsers.length
 
 		}
