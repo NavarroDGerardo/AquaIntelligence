@@ -5,7 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" type="text/css" href="Style.css">
-   	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/store.everything.min.js"></script>	   
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300" rel="stylesheet">
 </head>
@@ -42,7 +43,7 @@
 		<div class="crearNuevaOpcion">
 			<h3 class="tittleOpcionesAntes">Feed them</h3>
 
-			<button class="buttonFeedThem">Create new Food buttom</button>
+			<button class="buttonFeedThem">Create new Food button</button>
 
 			<h3 class="labelAntes">Peceras creadas</h3>
 		</div>
@@ -125,50 +126,58 @@
 				  <span class="slider"></span>
 				</label>
 
-				<button class="button buttonCharacteristics" id="create">Create new Food buttom</button>
+				<button class="button buttonCharacteristics" id="create">Create new Food button</button>
 			</div>
 		</div>
 	</div>
 
 	<script>
 
-			$('.buttonFeedThem').on('click', function(){
-				$('.crearNuevaOpcion').hide();
-				$('.mainOpcion').show();
-			})
+		$(document).ready(function () {
 
-			$('#create').on('click', function(){
-				$('.mainOpcion').hide();
-				$('.crearNuevaOpcion').show();
-			})
+			var username = store.get('actualUserName')
+			console.log(username)
+			$('#newUserName').text("Bienvenido " + username + "!")
+
+		});
+
+		$('.buttonFeedThem').on('click', function(){
+			$('.crearNuevaOpcion').hide();
+			$('.mainOpcion').show();
+		})
+
+		$('#create').on('click', function(){
+			$('.mainOpcion').hide();
+			$('.crearNuevaOpcion').show();
+		})
 
 		var peces = 1;
 		var i= 2;
 
-            $('#less').on('click', function(){
-    			if(peces >= 2){
-                	peces = peces -1;
-                	$('.numero').text("");
-                	$('.numero').text(peces);
-            	}else{
-            		alert("ya no se puede reducir el numero de peces");
-            	}
-            });
+		$('#less').on('click', function(){
+			if(peces >= 2){
+				peces = peces -1;
+				$('.numero').text("");
+				$('.numero').text(peces);
+			}else{
+				alert("ya no se puede reducir el numero de peces");
+			}
+		});
 
-            $('#more').on('click', function(){
-                peces = peces +1;
-                $('.numero').text("");
-                $('.numero').text(peces);
-            });
+		$('#more').on('click', function(){
+			peces = peces +1;
+			$('.numero').text("");
+			$('.numero').text(peces);
+		});
 
-            var optionHoveropened = false;
-            $("#optionHover").on('click', function(){
-            	$('#panelOpciones').fadeIn();
-            	$('#optionHover').addClass('open');
-            }, function(){
-            	$('#panelOpciones').fadeOut();
-            	$('#optionHover').removeClass('open');
-            })
+		var optionHoveropened = false;
+		$("#optionHover").on('click', function(){
+			$('#panelOpciones').fadeIn();
+			$('#optionHover').addClass('open');
+		}, function(){
+			$('#panelOpciones').fadeOut();
+			$('#optionHover').removeClass('open');
+		})
 	</script>
 
 </body>
