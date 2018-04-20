@@ -22,14 +22,23 @@
 		<div id="mainM">
 
 			<ul>
-				<li class="mainBar"><a href="index.html" class="zelda">Home</li>
-				<li class="mainBar"><a target="_blank" href="https://docs.google.com/document/d/1AMTKZIU7eioNwyf-0IfYaDa-WvkALL8xBTdRwWHwGjg/edit" class="zelda">About</li>
-				<li class="mainBar"><a target="_blank" href="https://docs.google.com/document/d/14o2fMbLm4Ei-JAwjm63jTW3dp3QVhqZe6QaCYTbLg4c/edit" class="zelda">Requirements</a></li>
+				<li class="mainBar"><a href="index.html" class="zelda">Evaluation</li>
+				<li class="mainBar"><a target="_blank" href="about.pdf" class="zelda">About</li>
+				<li class="mainBar"><a target="_blank" href="Rq.pdf" class="zelda">Requirements</a></li>
 				<li class="mainBar"><a target="_blank" href="https://marvelapp.com/611f31b/screen/39066284" class="zelda">Marvel app </a></li>
-				<li class="mainBar"><a target="_blank" href="" class="zelda">Personas</a></li>
+				<li class="mainBar"><a target="_blank" href="personas.pdf" class="zelda">Personas</a></li>
 			</ul>
 
+			<img src="menu.png" id="hamIndex">
 		</div>
+
+		<div id="indexNav">
+        	<h4 class="opcionesIndex">Evaluation</h4>
+			<h4 class="opcionesIndex">About</h4>
+			<h4 class="opcionesIndex">Requirements</h4>
+			<h4 class="opcionesIndex">Marvel app</h4>
+			<h4 class="opcionesIndex">Personas</h4>
+        </div>
 
 		<div id="fishT">
 
@@ -49,5 +58,14 @@
 			</div>
 
 		</div>
+
+		<script>
+
+		var navopened = false;
+        $('#hamIndex').on('click', function(){
+            $('#indexNav').slideToggle();
+        });
+
+	</script>
 </body>
 </html>
