@@ -7,6 +7,7 @@
     <title></title>
     <link rel="stylesheet" type="text/css" href="Style.css">
    	<script src="js/jquery-3.1.1.min.js"></script>
+   	<script src="js/store.everything.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300" rel="stylesheet">
 
@@ -19,7 +20,7 @@
       <p id="newUserName">Nombre del usuario</p>
       <ul>
         <li class="newMainBar" id="log-out"><a href="index.html" class="newZelda">Log out</a></li>
-        <li class="newMainBar"><a href="#." class="newZelda" id="optionHover">Options</a></li>
+        <li class="newMainBar"><a href="Menu.html" class="newZelda">Actions</a></li>
       </ul>
 
       <img id="newName" src="Name.png">
@@ -36,14 +37,13 @@
       </div>
     </header>
     
-		<div class="Chara"> </div>
+		<div class="hamBar">
+        <img class="hamIcon" src="menu.png">
+    </div>
 
-		<div class="videoOpciones">
+    <div class="videoOpciones">
 
-  		<div id="videoImg">  
-      </div>
-
-  			<nav>
+        <nav class="opcionesToggle">
             <h3 id="tittleOpciones">Actions</h3>
 
             <h3 class="opciones" id="linkWatchThem"><a href="#.">Watch Them</a></h3>
@@ -53,35 +53,49 @@
             <h3 class="opciones"><a href="calendar.html">Calendar</a></h3>
 
             <h3 class="opciones"><a href="clean.html">Clean them</a></h3>
-        
         </nav>
 
-  	</div>
-  			
-        <div class="ham">
-          <img src="menu.png" id="menuImg">
+        <div class="opcionesDisponibles">
+            <h3 id="tittleOpciones">Actions</h3>
+
+            <h3 class="opciones" id="linkWatchThem"><a href="#.">Watch Them</a></h3>
+
+            <h3 class="opciones"><a href="food.html">Feed Them</a></h3>
+
+            <h3 class="opciones"><a href="calendar.html">Calendar</a></h3>
+
+            <h3 class="opciones"><a href="clean.html">Clean them</a></h3>
+
         </div>
+        <div class="videoWatchThem">
+            <img src="pecera.jpg">
+        </div>
+    </div>
 
   </div>
 
 	<script>
+
+        $(document).ready(function () {
+            
+            var username = store.get('actualUserName')
+            console.log(username)
+            $('#newUserName').text("Bienvenido "+username+"!")
+
+        });
+
 		var navopened = false;
-		$('#menuImg').on('click', function(){
+		$('.hamIcon').on('click', function(){
 			$('nav').slideToggle();
 			}, function(){
    			$('nav').slideToggle();
         });
 
-        $('#linkWatchThem').on('click', function(){
-        	$('nav').slideToggle();
-        })
 
-    /*Duda con el wrapper*/
-
-    $("#optionHover").on('click', function(){
+    /*$("#optionHover").on('click', function(){
       $('#panelOpciones').fadeIn();
       $('#optionHover').addClass('open');
-    })
+    })*/
 	</script>
 
 </body>

@@ -5,14 +5,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" type="text/css" href="Style.css">
-   	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/store.everything.min.js"></script>	   
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300" rel="stylesheet">
 </head>
 <body>
 	<div class="confirmacion">
 		<br>
-		se alimento exitosamente a tus peces
+		Se alimentó exitosamente a tus peces
 	</div>
 
 	<div id="newWrapper">
@@ -20,7 +21,7 @@
 			<p id="newUserName">Nombre del usuario</p>
 			<ul>
 				<li class="newMainBar" id="log-out"><a href="index.html" class="newZelda">Log out</a></li>
-				<li class="newMainBar"><a href="#." class="newZelda" id="optionHover">Options</a></li>
+				<li class="newMainBar"><a href="Menu.html" class="newZelda">Actions</a>
 			</ul>
 
 			<img id="newName" src="Name.png">
@@ -42,10 +43,19 @@
 		<div class="crearNuevaOpcion">
 			<h3 class="tittleOpcionesAntes">Feed them</h3>
 
-			<button class="buttonFeedThem">Create new Food buttom</button>
+			<button class="buttonFeedThem">Create new Food button</button>
 
-			<h3 class="labelAntes">Peceras creadas</h3>
+			<h3 class="labelAntes">Created Fish Tanks</h3>
 
+			<div id="feedButtonsContainer">
+				<!-- <button>Cosa 1</button><br>
+				<button>Cosa 1</button><br>
+				<button>Cosa 1</button><br>
+				<button>Cosa 1</button><br>
+				<button>Cosa 1</button><br>
+				<button>Cosa 1</button><br>
+				<button>Cosa 1</button><br> -->
+			</div>
 
 		</div>
 
@@ -127,52 +137,96 @@
 				  <span class="slider"></span>
 				</label>
 
-				<br><br><br><br><br><br>
-
-				<button class="button buttonCharacteristics" id="create">Create new Food buttom</button>
+				<button class="button buttonCharacteristics" id="create">Create new Food button</button>
 			</div>
 		</div>
 	</div>
 
 	<script>
 
-			$('.buttonFeedThem').on('click', function(){
-				$('.crearNuevaOpcion').hide();
-				$('.mainOpcion').show();
-			})
-
-			$('#create').on('click', function(){
-				$('.mainOpcion').hide();
-				$('.crearNuevaOpcion').show();
-			})
-
 		var peces = 1;
-		var i= 2;
+		var i = 2;
 
-            $('#less').on('click', function(){
-    			if(peces >= 2){
-                	peces = peces -1;
-                	$('.numero').text("");
-                	$('.numero').text(peces);
-            	}else{
-            		alert("ya no se puede reducir el numero de peces");
-            	}
-            });
+		$(document).ready(function () {
 
-            $('#more').on('click', function(){
-                peces = peces +1;
-                $('.numero').text("");
-                $('.numero').text(peces);
-            });
+			var username = store.get('actualUserName')
+			console.log(username)
+			$('#newUserName').text("Bienvenido " + username + "!")
+			fillFeedButtonsContainer()
 
-            var optionHoveropened = false;
-            $("#optionHover").on('click', function(){
-            	$('#panelOpciones').fadeIn();
-            	$('#optionHover').addClass('open');
-            }, function(){
-            	$('#panelOpciones').fadeOut();
-            	$('#optionHover').removeClass('open');
-            })
+		});
+
+		$('.buttonFeedThem').on('click', function(){
+			$('.crearNuevaOpcion').hide();
+			$('.mainOpcion').show();
+		})
+
+		$('#create').on('click', function(){
+
+			var numPeces = peces
+			var portions = $("#Amount").val()
+			var hours = $("#hour").val()
+
+			console.log(numPeces)
+			console.log(portions)
+			console.log(hours)
+
+			var foodButtons = store.get('foodButtons')
+			if(foodButtons == undefined){
+				foodButtons = []
+			}
+
+			foodButtons.push({
+				numPeces:peces,
+				portions:portions,
+				hours:hours
+			})
+
+			store.set('foodButtons', foodButtons)
+
+			fillFeedButtonsContainer()
+
+			$('.mainOpcion').hide();
+			$('.crearNuevaOpcion').show();
+		})
+
+		function fillFeedButtonsContainer(){
+			var foodButtons = store.get('foodButtons')
+			if (foodButtons != undefined) {
+				$('#feedButtonsContainer').html('')
+				for(foodButton in foodButtons){
+
+					$('#feedButtonsContainer').append('<button class="pecerasCreadas"><img src="peceraCreada.png"><h4 class="NombrePecera">Pecera '+foodButton+'</h4></button><br>')
+
+				}
+				
+			}
+		}
+
+		$('#less').on('click', function(){
+			if(peces >= 2){
+				peces = peces -1;
+				$('.numero').text("");
+				$('.numero').text(peces);
+			}else{
+				alert("ya no se puede reducir el numero de peces");
+			}
+		});
+
+		$('#more').on('click', function(){
+			peces = peces +1;
+			$('.numero').text("");
+			$('.numero').text(peces);
+		});
+
+		var optionHoveropened = false;
+		$("#optionHover").on('click', function(){
+			$('#panelOpciones').fadeIn();
+			$('#optionHover').addClass('open');
+		}, function(){
+			$('#panelOpciones').fadeOut();
+			$('#optionHover').removeClass('open');
+		})
 	</script>
 
 </body>
