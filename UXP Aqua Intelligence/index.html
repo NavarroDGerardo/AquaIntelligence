@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="Style.css">
+
+   	<script src="js/jquery-3.1.1.min.js"></script>
+   	<script src="js/store.everything.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300" rel="stylesheet">
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-118743862-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-118743862-1');
+	</script>
+
+
+</head>
+<body>
+	<div id="newWrapper">
+		<header id="newHeader">
+			<img id="name" src="Name.png">
+			<img class="socialIndex" src="facebook.svg">
+			<img class="socialIndex" src="instagram.svg">
+			<img class="socialIndex		" src="pinterest.svg">
+		</header>
+		<div id="mainM">
+
+			<ul>
+				<li class="mainBar"><a href="index.html" class="zelda">Evaluation</li>
+				<li class="mainBar"><a target="_blank" href="about.pdf" class="zelda">About</li>
+				<li class="mainBar"><a target="_blank" href="Rq.pdf" class="zelda">Requirements</a></li>
+				<li class="mainBar"><a target="_blank" href="https://marvelapp.com/611f31b/screen/39066284" class="zelda">Marvel app </a></li>
+				<li class="mainBar"><a target="_blank" href="personas.pdf" class="zelda">Personas</a></li>
+			</ul>
+
+			<img src="menu.png" id="hamIndex">
+		</div>
+
+		<div id="indexNav">
+        	<h4 class="opcionesIndex"><a target="_blank" href="Evaluations.pdf" class="zelda">Evaluation</a></h4>
+			<h4 class="opcionesIndex"><a target="_blank" href="about.pdf" class="zelda">About</a></h4>
+			<h4 class="opcionesIndex"><a target="_blank" href="Rq.pdf" class="zelda">Requirements</a></h4>
+			<h4 class="opcionesIndex"><a target="_blank" href="https://marvelapp.com/611f31b/screen/39066284" class="zelda">Marvel app </a></h4>
+			<h4 class="opcionesIndex"><a target="_blank" href="personas.pdf" class="zelda">Personas</a></h4>
+        </div>
+
+        <section id="logInDiv">
+
+			<div class="welcome">
+				
+				<h2>Welcome</h2>
+				<img class="newLogo" src="Logo.png">
+
+				<div id="LogIn">
+					<h1 id="indexLog">Log in</h1>
+					<hr>
+			   <!-- <input class="homeI" id="emailField" type="email" placeholder="Email" name="username" size="50" maxlength="20" required=""> -->
+					<input class="homeI" id="emailField" type="text" placeholder="Username" name="username" size="50" maxlength="20" required="">
+					<br>
+					<input class="homeI" id="userPassword" type="password" placeholder="Password" name="username" size="30" maxlength="20" required="">
+					<br>
+					<button class="homeI" id="boton">Enter</button>
+					<p class="mPara change-section" data-seccion="#createAccount">Create an account</p>
+					<p class="errorAccount" id="incorrectUP">Incorrect UserName or Password</p>
+				</div>
+
+			</div>
+
+			<div class="Chara">	</div>
+
+			<div class="main">
+				<p class="hPara">The technology for taking care of your fish</p>
+				<hr>
+					<!-- <a href="#explicacionEye" data-var="#explicacionEye">
+						<div class="box">
+							<p class="hParaE"> Watch them</p>
+							<img src="eye.png" id="eye">
+						</div>
+					</a> -->
+					<a href="#explicacionComida" data-var="#explicacionComida">
+						<div class="box">
+							<p class="hParaE" id="phone"> Feed them </p>
+							<img src="comida.png" class="boxImg">
+						</div>
+					</a>
+					<!-- <a href="#explicacionCamara" data-var="#explicacionCamara">
+						<div class="box">
+							<p class="hParaE" id="fotos"> Take some photos </p>
+							<img src="camara.jpg" class="boxImg">
+						</div>
+					</a> -->
+					<a href="#explicacionCalendar" data-var="#explicacionCalendar">
+						<div class="box">
+							<p class="hParaE"> Set the day </p>
+							<img src="calendar.png" class="boxImg">
+						</div>
+					</a>
+					<!-- <a href="#explicacionBroom" data-var="#explicacionBroom">
+						<div class="box">
+							<p class="hParaE"> Clean them</p>
+							<img src="broom.png" class="boxImg">
+						</div>
+					</a> -->
+					<a href="#explicacionNotificacion" data-var="#explicacionNotificacion">
+					<div class="box">
+						<p class="hParaE">don't forget</p>
+						<img src="notification.png" class="boxImg">
+					</div>
+					</a>
+			</div>
+
+			<div class="Chara">	</div>
+
+			<div class="expli" id="explicacionEye">
+	   		 <div class="tittle">Watch them</div>
+	        	<div class="text">
+	        	With this functionality you will be able to see your fish live while sitll contnuing with all your daily activities. The visor is connected through the AquaIntelligence device so it can send direct HD video to your mobile device wherever you are.
+	   		 </div>
+	   	 </div>
+
+	   	 <div class="expli" id="explicacionComida">
+	   		 <div class="tittle">Feed them</div>
+	        	<div class="text">
+	        	Worried your fish might be hungry? We've got you covered. With the installed app on your phone you can feed a certain amount of food so your fish are covered in case you have to miss their usual feeding time.
+	   		 </div>
+	   	 </div>
+
+	   	 <div class="expli" id="explicacionCamara">
+	   		 <div class="tittle">Take some photos</div>
+	        	<div class="text">
+	        	Control you fish tank and show it to the world by taking HQ photos of it. You can either control the lights and ilumination of the tank itself and take a snap of the whole system or just some specific areas you choose.
+	   		 </div>
+	   	 </div>
+
+	   	 <div class="expli" id="explicacionCalendar">
+	   		 <div class="tittle">Set the day</div>
+	        	<div class="text">
+	        	Planning a trip? Covering some job errand on another location? With this functionality you can actually choose how many days you might be absent, so the AquaIntelligence device can be programmed in order to feed your friends at a certain time of the day, clean the tank, regulate the water conditions, etc. The calendar can also be controlled through you device as it can be ajusted to your needs.
+	   		 </div>
+	   	 </div>
+
+	   	 <div class="expli" id="explicacionBroom">
+	   		 <div class="tittle">Clean them</div>
+	        	<div class="text">
+	        	Whenever your tank starts to get a little dusty from all the aquatic life happening inside of it, we can clean it with a simple click. The AquaIntelligence cleaner works with filters that constantly clean the water and mantain the walls of your tank completely transparent, while the purifying laser can be activated once a week to eliminate bacteria and other type of contaminants tht might exist within the tank.
+	   		 </div>
+	   	 </div>
+
+	   	 <div class="expli" id="explicacionNotificacion">
+	   		 <div class="tittle">Don't forget</div>
+	        	<div class="text">
+	        	While AquaIntelligence and it's devices offer a simple solution to several problems and situations, your tank is harboring a certain type of life that might be threatened by many factors. Be sure to still read and investigate about the type of fish you're getting, their life span and what other things may cause a damage. Insppropiate care of your tank may result in any life being endagered if not taken suficiently seriously. Take care of your buddies!
+	   		 </div>
+	   	 </div>
+
+			<div class="Chara">	</div>
+
+			<div class="credits">
+				<h4 class="tituloCreditos">Designed by:</h4>
+				<h4 class="textoCreditos">Navarro D. Gerardo</h4>
+				<h4 class="textoCreditos">Rodrigo Medina Neri</h4>
+			</div>
+		</section>
+
+		<section id="createAccount">
+				<div id="fishT">
+					<div id="signUp">
+						<h1 id="mainPSign">Sign up</h1>
+						<hr>
+						<br>
+						<input id="nameField" type="text" placeholder="Username" name="username" size="30" maxlength="20" required="">
+						<br>
+						<input id="pswdField" type="password" placeholder="Password" name="username" size="30" maxlength="20" required="">
+						<br>
+						<input id="pswdFieldCheck" type="password" placeholder="check your password" name="username" size="30" maxlength="20" required="">
+						<br>
+						<button id="botonMenuP">Create your account</button>
+						<p class="errorAccount" id="errorPassword">The passwords don't match</p>
+						<p class="mParaMainP change-section" data-seccion="#logInDiv">Go to Login</p>
+						<!-- <p class="mPara change-section">Create an account</p> -->
+					</div>
+				</div>
+		</section>
+	</div>
+
+	<script>
+
+		/*$(".homeI#boton").on('click', function(){
+			
+			var email = $(".homeI#emailField").val()
+			var pswd = $(".homeI#pswdField").val()
+
+			var users = store.get('users')
+			if(users == undefined){
+				window.location.href = "./mainP.html"
+				alert("Bienvenido nuevo usuario, regístrate")
+			}
+
+			var actualUser = users.filter(function(user){
+				return user.email == email
+			})
+
+			alert("Bienvenido de Nuevo "+actualUser[0].name)
+			store.set('actualUserName', actualUser[0].name)
+			window.location.href = "./Menu.html"
+		})*/
+
+		window.localStorage.setItem('usuarioLogged', null);
+
+		$('.change-section').on('click', function(){
+			$('section').fadeOut().delay(200);
+			$($(this).data('seccion')).fadeIn();
+		})
+
+		if(store.get('tot-user')==null){
+			store.set('tot-user', 0);
+		}
+
+		/*Crear Usuario*/
+
+		$('#botonMenuP').on('click', function(){
+
+			if($('#pswdField').val() == $('#pswdFieldCheck').val() && $('#pswdField').val()!="" && $('#nameField').val()!=""){
+				store.set('tot-user', store.get('tot-user') + 1);
+
+				store.set('user-'+store.get('tot-user'),{
+					username: $('#nameField').val(),
+					password: $('#pswdField').val()
+				})
+
+				$('section').fadeOut().delay(200);
+				$('#logInDiv').fadeIn();
+			}else{
+				$('#errorPassword').fadeIn().delay(800);
+				$('#errorPassword').fadeOut();
+			}
+		});
+
+		/*Validar el usuario para hacer login*/
+
+		$('#boton').on('click', function(){
+			for(var i=1; i<=store.get('tot-user'); i++){
+				var u = store.get('user-'+i);
+				if(u.username ==  $('#emailField').val() && u.password == $('#userPassword').val()){
+					store.set('usuarioLogged', u.username);
+					window.location.href = 'Menu.html';
+				}
+			}
+
+			$('#incorrectUP').fadeIn().delay(800);
+			$('#incorrectUP').fadeOut();
+		});
+
+		/*Funciones de la pagina*/
+
+		$('a').on('click', function(){
+			var data = $(this).data("var");
+
+			$('.expli').hide();
+			$(data).fadeIn();
+		})
+
+		var navopened = false;
+        $('#hamIndex').on('click', function(){
+            $('#indexNav').slideToggle();
+        });
+
+	</script>
+</body>
+</html>

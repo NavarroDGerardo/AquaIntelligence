@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="Style.css">
+   	<script src="js/jquery-3.1.1.min.js"></script>
+	   <script src="js/store.everything.min.js"></script>
+	   <!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-118743862-1"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-118743862-1');
+		</script>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300" rel="stylesheet">
+</head>
+<body>
+	<div id="newWrapper">
+		<header id="newHeader">
+			<p id="newUserName">Nombre del usuario</p>
+			<ul>
+				<li class="newMainBar" id="log-out"><a href="index.html" class="newZelda">Log out</a></li>
+				<li class="newMainBar"><a href="Menu.html" class="newZelda">Actions</a>
+			</ul>
+
+			<img id="newName" src="Name.png">
+			<img class="social" src="facebook.svg">
+			<img class="social" src="instagram.svg">
+			<img class="social" src="pinterest.svg">
+
+			<div id="panelOpciones">
+				<a href="#." class="panelOpcionesHover">change password</a></h3>
+				<a href="#." class="panelOpcionesHover">change font color</a></h3>
+				<a href="#." class="panelOpcionesHover">change name</a></h3>
+				<a href="index.html" class="panelOpcionesHover">log out</a></h3>
+
+			</div>
+		</header>
+
+		<div class="Chara">	</div>
+
+		<div class="calendar">
+
+			<section id="calendarios">
+				<h3 id="calendarTitle">Calendar</h3><hr>
+
+				<button class="buttonCalendar" data-seccion=".calendar2">Create new Calendar</button>
+
+				<div id="contenedorDeCalendarios"></div>
+
+					<!-- 
+					<div class="calendariosCreados">
+						<img src="calendarCreado.png">
+						<span id="opcionesCalendario">
+							<p class="delete">Delete</p>
+						</span>
+						<span id="informacion">
+							<p class="tituloOpcion" id="dia">day: 5</p>
+							<p class="tituloOpcion" id="mes">month: may</p>
+							<p class="tituloOpcion" id="hora">hour: 12:00</p>
+						</span>
+					</div> 
+					-->
+
+			</section>
+
+			<section class="calendar2">
+				<h3 id="calendarTitle2">Calendar</h3>
+
+				<h3 class="calendarOpciones2">Set the day when you want:</h3>
+					<select id="calendarDay">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+						<option value="13">13</option>
+						<option value="14">14</option>
+						<option value="15">15</option>
+						<option value="16">16</option>
+						<option value="17">17</option>
+						<option value="18">18</option>
+						<option value="19">19</option>
+						<option value="20">20</option>
+						<option value="21">21</option>
+						<option value="22">22</option>
+						<option value="23">23</option>
+						<option value="24">24</option>
+						<option value="25">25</option>
+						<option value="26">26</option>
+						<option value="27">27</option>
+						<option value="28">28</option>
+						<option value="29">29</option>
+						<option value="30">30</option>
+						<option value="31">31</option>
+					</select>
+				<h3 class="calendarOpciones2">Set the month you want:</h3>
+					<select id="calendarMonth">
+						<option value="january">january</option>
+						<option value="february">february</option>
+						<option value="march">march</option>
+						<option value="april">april</option>
+						<option value="may">may</option>
+						<option value="june">june</option>
+						<option value="july">july</option>
+						<option value="august">august</option>
+						<option value="september">september</option>
+						<option value="october">october</option>
+						<option value="november">november</option>
+						<option value="december">december</option>
+					</select>
+				<h3 class="calendarOpciones2">Set the hour you want:</h3>
+					<select id="calendarHour">
+						<option value="1:00">1:00</option>
+						<option value="2:00">2:00</option>
+						<option value="3:00">3:00</option>
+						<option value="4:00">4:00</option>
+						<option value="5:00">5:00</option>
+						<option value="6:00">6:00</option>
+						<option value="7:00">7:00</option>
+						<option value="8:00">8:00</option>
+						<option value="9:00">9:00</option>
+						<option value="10:00">10:00</option>
+						<option value="11:00">11:00</option>
+						<option value="12:00">12:00</option>
+						<option value="13:00">13:00</option>
+						<option value="14:00">14:00</option>
+						<option value="15:00">15:00</option>
+						<option value="16:00">16:00</option>
+						<option value="17:00">17:00</option>
+						<option value="18:00">18:00</option>
+						<option value="19:00">19:00</option>
+						<option value="20:00">20:00</option>
+						<option value="21:00">21:00</option>
+						<option value="22:00">22:00</option>
+						<option value="23:00">23:00</option>
+						<option value="24:00">24:00</option>
+					</select>
+
+				<button class="buttonCalendar2" id="creacion">Create new Calendar</button>
+
+			</section>
+
+		</div>
+	</div>
+
+	<script>
+
+		$('.buttonCalendar').on('click', function(){
+			$('section').fadeOut().delay(200);
+			$($(this).data('seccion')).fadeIn();
+		})
+
+		if(store.get('tot-calendars')==null){
+			store.set('tot-calendars', 0);
+		}
+
+		$('#creacion').on('click', function(){
+			store.set('tot-calendars', store.get('tot-calendars')+1);
+
+			store.set('calendars-'+store.get('tot-calendars'),{
+				owner: store.get('usuarioLogged'),
+				dia: $('#calendarDay').val(),
+				mes: $('#calendarMonth').val(),
+				hora: $('#calendarHour').val(),
+				enabled: true
+			});
+
+			displayCalendars();
+
+			$('section').fadeOut().delay(200);
+			$('#calendarios').fadeIn();
+		});
+
+		function displayCalendars(){
+			$('#contenedorDeCalendarios').empty();
+
+			for(var i=1; i<=store.get('tot-calendars'); i++){
+				var c= store.get('calendars-'+i);
+
+				if(c.owner == store.get('usuarioLogged')){
+					$('#contenedorDeCalendarios').append(`
+						<div class="calendariosCreados">
+							<img src="calendarCreado.png">
+							<span id="opcionesCalendario">
+								<p class="delete">Delete</p>
+							</span>
+							<span id="informacion">
+								<p class="tituloOpcion" id="dia">day: ${c.dia}</p>
+								<p class="tituloOpcion" id="mes">month: ${c.mes}</p>
+								<p class="tituloOpcion" id="hora">hour: ${c.hora}</p>
+							</span>
+						</div> 
+					`);
+				}
+			}			
+		}
+
+		displayCalendars();
+
+		/*$(document).ready(function () {
+
+			var username = store.get('actualUserName')
+			console.log(username)
+			$('#newUserName').text("Bienvenido " + username + "!")
+			fillCalendarButtonsContainer()
+		});
+
+		$('.buttonCalendar').on('click', function(){
+			$('.calendar').hide();
+			$('.calendar2').show();
+		})
+
+		$('.buttonCalendar2').on('click', function(){
+
+			var month = $('#calendarMonth').val()
+			var day = $('#calendarDay').val()
+			var hour = $('#calendarHour').val()
+
+			var calendarButtons = store.get('calendarButtons')
+			if(calendarButtons == undefined){
+				calendarButtons = []
+			}
+
+			calendarButtons.push({
+				month:month,
+				day:day,
+				hour:hour
+			})
+
+			store.set('calendarButtons', calendarButtons)
+			fillCalendarButtonsContainer()
+
+			$('.calendar2').hide();
+			$('.calendar').show();
+		})
+
+		function fillCalendarButtonsContainer(){
+			var calendarButtons = store.get('calendarButtons')
+			if(calendarButtons != undefined){
+				$('#calendarButtonsContainer').html('')
+				for(calendarButton in calendarButtons){
+					$('#calendarButtonsContainer').append('<button class="pecerasCreadas"><img src="calendario.png"><h4 class="NombrePecera">Calendario ' + calendarButton + '</button><br>')
+
+				}
+				
+			}
+		}*/
+
+		/*$("#optionHover").on('click', function(){
+			$('#panelOpciones').fadeIn();
+			$('#optionHover').addClass('open');
+		})*/
+	</script>
+</body>
+</html>
