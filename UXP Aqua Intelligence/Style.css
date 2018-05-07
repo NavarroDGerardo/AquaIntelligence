@@ -74,6 +74,23 @@ header{
 	display: none;
 }
 
+#navFeed{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(1000, 1000, 1000, 0.4);
+	display: none;
+}
+
+.botonesFeedThem{
+	color: #235dff;
+	font-size: 30px;
+	text-decoration: none;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	text-decoration: underline overline;
+}
+
 .opcionesIndex{
 	color: #fff;
 	font-size: 30px;
@@ -680,8 +697,9 @@ h2{
 }
 
 .buttonCharacteristics {
-    background-color: #fff;
-    color: #235dff;
+    background-color: #235dff;
+    color: #fff;
+    border-radius: 15%
 }
 
 .buttonCharacteristics:hover {
@@ -949,6 +967,27 @@ input:checked + .slider:before {
 	width: 100%;
 }
 
+#contenedorDeBotonesFeedThem{
+	width: 100%;
+}
+
+.botonPecera img{
+	width: 80px;
+}
+
+.cancel{
+	color: #fff;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.spanBotones{
+	width: 100%;
+	height: 100%;
+	float: left;
+	/*background-color: red;*/
+}
+
 @media screen and (max-width:1500px){
 
     #newWrapper{
@@ -1110,25 +1149,23 @@ input:checked + .slider:before {
 
 	.botonesOpciones{
 		width: 100%;
-		height: 100%;
+		height: 700px;
 		text-align: center;
 	}
 
 	.tittleOpciones{
-		font-size: 50px;
+		font-size: 60px;
 		color: #fff;
 		font-weight: bold;
-		margin-left: 0;
-		padding-left: 0;
-		text-decoration: underline;
+		padding: 15px 0;
 		text-align: center;
 	}
 
 	.opcionesApp{
 		color: #fff;
-		font-size: 30px;
+		font-size: 20px;
 		padding: 0;
-		padding-top: 30px;
+		padding-top: 0px;
 		padding-bottom: 20px;
 
 	}
@@ -1637,6 +1674,18 @@ input:checked + .slider:before {
 	    border: 2px solid #000; 
 	}
 
+	.botonFeed{
+		background-color: #235dff;
+	    color: #fff;
+	    font-weight: bold;
+	    padding: 10px 70px;
+		margin-left: 0%;
+		font-size: 20px;
+		display: block;
+		margin: 10px auto;
+		border-radius: 50%;
+	}
+
 	/***************************/
 	/*							*/
 	/*	responsive celular		*/
@@ -1803,12 +1852,12 @@ input:checked + .slider:before {
 
 	#informacion{
 		float: left;
-		margin: 25px 0 10px 10%;
+		margin: 25px 0 10px 0;
 		color: #fff;
 	}
 
 	#opcionesCalendario{
-		margin: 25px 0 10px 7%;
+		margin: 25px 0 10px 2%;
 		float: left;
 		color: #fff;
 		text-decoration: underline;
@@ -1817,5 +1866,9 @@ input:checked + .slider:before {
 	.delete{
 		color: #F00;
 		margin: 15px 25px;
+	}
+
+	#opcionesDeCreacion{
+		display: none;
 	}
 }

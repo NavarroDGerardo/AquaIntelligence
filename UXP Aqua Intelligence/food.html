@@ -20,11 +20,6 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300" rel="stylesheet">
 </head>
 <body>
-	<div class="confirmacion">
-		<br>
-		Se alimentó exitosamente a tus peces
-	</div>
-
 	<div id="newWrapper">
 		<header id="newHeader">
 			<p id="newUserName">Nombre del usuario</p>
@@ -46,41 +41,32 @@
 
 			</div>
 		</header>
-		
-		<div class="Chara">	</div>
 
-		<div class="crearNuevaOpcion">
-			<h3 class="tittleOpcionesAntes">Feed them</h3>
+		<div class="botonesOpciones">
+			<section id="botonesCreados">
+				<div id="mainM">
+					<img src="menu.png" id="hamIndex">
+				</div>
 
-			<button class="buttonFeedThem">Create new Food button</button>
+				<div id="navFeed">
+		        	<h4 class="botonesFeedThem">Feed them now</h4>
+		        	<h4 class="botonesFeedThem change-section" data-seccion="#opcionesDeCreacion">Create new feed button</h4>
+		        	<h4 class="botonesFeedThem" id="return">Return to options</h4>
+		        </div>
 
-			<h3 class="labelAntes">Created Fish Tanks</h3>
+				<h3 id="calendarTitle">Feed them</h3><hr>
 
-			<div id="feedButtonsContainer">
-				<!-- <button>Cosa 1</button><br>
-				<button>Cosa 1</button><br>
-				<button>Cosa 1</button><br>
-				<button>Cosa 1</button><br>
-				<button>Cosa 1</button><br>
-				<button>Cosa 1</button><br>
-				<button>Cosa 1</button><br> -->
-			</div>
+				<div id="contenedorDeBotonesFeedThem"></div>
+ 					
+			</section>
 
-		</div>
+			<section id="opcionesDeCreacion">
 
-		<div class="mainOpcion">
+				<h3 id="calendarTitle">Feed them</h3><hr>
 
-			<div class="dias">
-				<br><br><br><br><hr>
-				<br><br><br><br><hr>
-				<br><br><br><br><hr>
-				<br><br><br><br><hr>
-				<br><br><br><br><hr>
-				<br><br><br><br><hr>
-			</div>
-			
-			<div class="botonesOpciones">
-				<h3 class="tittleOpciones">Feed them</h3>
+				<h4 class="opcionesApp">Name of fish tank: </h4>
+
+				<input id="nameField" class="nombreDeLaPecera" type="text" placeholder="name of fish tank" name="username" size="30" maxlength="20" required="">
 
 				<h4 class="opcionesApp">Number of fishes that you own: </h4>
 				<div class="masMenos">
@@ -93,11 +79,10 @@
 					<h3 class="MenosMasH3" id="more">
 						+
 					</h3>
+				</div><br>
 
-				</div>
+				<h4 class="opcionesApp">Number of portions of food: </h4>
 
-
-				<h4 class="opcionesApp">Amount of portions of food: </h4>
 				<select id="Amount">
 					<option value="1">1</option>
 					<option value="2">2</option>
@@ -108,55 +93,109 @@
 					<option value="7">7</option>
 					<option value="8">8</option>
 					<option value="9">9</option>
-					<option value="+10">+10</option>
-				</select>
-
-				<h4 class="opcionesApp">hours before we give food again:</h4>
-				<select id="hour">
-					<option value="1">1</option>
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5</option>
-					<option value="6">6</option>
-					<option value="7">7</option>
-					<option value="8">8</option>
-					<option value="9">9</option>
 					<option value="10">10</option>
-					<option value="11">11</option>
-					<option value="12">12</option>
-					<option value="13">13</option>
-					<option value="14">14</option>
-					<option value="15">15</option>
-					<option value="16">16</option>
-					<option value="17">17</option>
-					<option value="18">18</option>
-					<option value="19">19</option>
-					<option value="20">20</option>
-					<option value="21">21</option>
-					<option value="22">22</option>
-					<option value="23">23</option>
-					<option value="24">24</option>
 				</select>
 
+				<h4 class="opcionesApp" style="font-size: 15px">each portion is 10mg of food</h4>
 
-				<h4 class="opcionesApp">Get notifications</h4>
-				<label class="switch">
-				  <input type="checkbox">
-				  <span class="slider"></span>
-				</label>
+				<button class="button buttonCharacteristics" id="creacionFeedButton">Create new Food button</button>
 
-				<button class="button buttonCharacteristics" id="create">Create new Food button</button>
-			</div>
+				<span class="cancel change-section" data-seccion="#botonesCreados">Cancel</span>
+				
+			</section>
 		</div>
+
 	</div>
 
 	<script>
 
+		var navopened = false;
+        $('#hamIndex').on('click', function(){
+            $('#navFeed').slideToggle();
+        });
+
+        $('.botonesFeedThem').on('click', function(){
+        	$('#navFeed').slideToggle();
+        })
+
+        $('.change-section').on('click', function(){
+			$('section').fadeOut().delay(200);
+			$($(this).data('seccion')).fadeIn();
+		})
+
 		var peces = 1;
 		var i = 2;
 
-		$(document).ready(function () {
+		$('#less').on('click', function(){
+			if(peces >= 2){
+				peces = peces -1;
+				$('.numero').text("");
+				$('.numero').text(peces);
+			}else{
+				alert("ya no se puede reducir el numero de peces");
+			}
+		});
+
+		$('#more').on('click', function(){
+			peces = peces +1;
+			$('.numero').text("");
+			$('.numero').text(peces);
+		});
+
+		if(store.get('tot-feedButton')==null){
+			store.set('tot-feedButton', 0);
+		}
+
+		$('#creacionFeedButton').on('click', function(){
+			store.set('tot-feedButton', store.get('tot-feedButton')+1);
+
+			store.set('feedButton-'+store.get('tot-feedButton'),{
+				owner: store.get('usuarioLogged'),
+				name: $('.nombreDeLaPecera').val(),
+				numeroPeces: peces,
+				foodAmount: $('#Amount').val(),
+				enable: true
+			});
+
+			displayFeedButtons();
+
+			$('section').fadeOut().delay(200);
+			$('#botonesCreados').fadeIn();
+		});
+
+		function displayFeedButtons(){
+			$('#contenedorDeBotonesFeedThem').empty();
+
+			for(var i=1; i<=store.get('tot-feedButton'); i++){
+				var b= store.get('feedButton-'+i);
+
+				if(b.owner == store.get('usuarioLogged')){
+					$('#contenedorDeBotonesFeedThem').append(`
+						<div class="spanBotones">
+							<span class="botonPecera">
+								<img src="peceraCreada.png">
+							</span>
+							<span id="opcionesCalendario">
+								<p class="delete">Delete</p>
+							</span>
+							<span id="informacion">
+								<p class="tituloOpcion" id="dia">Tank name: ${b.name}</p>
+								<p class="tituloOpcion" id="mes"># fishes: ${b.numeroPeces}</p>
+								<p class="tituloOpcion" id="hora">food portion: ${b.foodAmount}</p>
+							</span>
+						</div>
+					`);
+				}
+			}
+		}
+
+		displayFeedButtons();
+
+		$('#return').on('click', function(){
+			window.location.href = 'Menu.html';
+		});
+
+		/*$(document).ready(function () {
 
 			var username = store.get('actualUserName')
 			console.log(username)
@@ -168,9 +207,9 @@
 		$('.buttonFeedThem').on('click', function(){
 			$('.crearNuevaOpcion').hide();
 			$('.mainOpcion').show();
-		})
+		})*/
 
-		$('#create').on('click', function(){
+		/*$('#create').on('click', function(){
 
 			var numPeces = peces
 			var portions = $("#Amount").val()
@@ -210,32 +249,16 @@
 				}
 				
 			}
-		}
+		}*/
 
-		$('#less').on('click', function(){
-			if(peces >= 2){
-				peces = peces -1;
-				$('.numero').text("");
-				$('.numero').text(peces);
-			}else{
-				alert("ya no se puede reducir el numero de peces");
-			}
-		});
-
-		$('#more').on('click', function(){
-			peces = peces +1;
-			$('.numero').text("");
-			$('.numero').text(peces);
-		});
-
-		var optionHoveropened = false;
+		/*var optionHoveropened = false;
 		$("#optionHover").on('click', function(){
 			$('#panelOpciones').fadeIn();
 			$('#optionHover').addClass('open');
 		}, function(){
 			$('#panelOpciones').fadeOut();
 			$('#optionHover').removeClass('open');
-		})
+		})*/
 	</script>
 
 </body>
