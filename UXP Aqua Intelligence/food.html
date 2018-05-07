@@ -49,7 +49,7 @@
 				</div>
 
 				<div id="navFeed">
-		        	<h4 class="botonesFeedThem">Feed them now</h4>
+		        	<h4 class="botonesFeedThem" id="now">Feed them now</h4>
 		        	<h4 class="botonesFeedThem change-section" data-seccion="#opcionesDeCreacion">Create new feed button</h4>
 		        	<h4 class="botonesFeedThem" id="return">Return to options</h4>
 		        </div>
@@ -123,6 +123,10 @@
 			$($(this).data('seccion')).fadeIn();
 		})
 
+		$('#now').on('click', function(){
+			alert("you feed your fishes");
+		});
+
 		var peces = 1;
 		var i = 2;
 
@@ -171,7 +175,7 @@
 
 				if(b.owner == store.get('usuarioLogged')){
 					$('#contenedorDeBotonesFeedThem').append(`
-						<div class="spanBotones">
+						<div class="spanBotones" data-id='calendar-${i}'>
 							<span class="botonPecera">
 								<img src="peceraCreada.png">
 							</span>

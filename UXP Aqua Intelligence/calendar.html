@@ -50,23 +50,9 @@
 			<section id="calendarios">
 				<h3 id="calendarTitle">Calendar</h3><hr>
 
-				<button class="buttonCalendar" data-seccion=".calendar2">Create new date for cleaning</button>
+				<button class="buttonCalendar change" data-seccion=".calendar2">Create new date for cleaning</button>
 
 				<div id="contenedorDeCalendarios"></div>
-
-					<!-- 
-					<div class="calendariosCreados">
-						<img src="calendarCreado.png">
-						<span id="opcionesCalendario">
-							<p class="delete">Delete</p>
-						</span>
-						<span id="informacion">
-							<p class="tituloOpcion" id="dia">day: 5</p>
-							<p class="tituloOpcion" id="mes">month: may</p>
-							<p class="tituloOpcion" id="hora">hour: 12:00</p>
-						</span>
-					</div> 
-					-->
 
 			</section>
 
@@ -150,7 +136,9 @@
 						<option value="24:00">24:00</option>
 					</select>
 
-				<button class="buttonCalendar2" id="creacion">Create new Calendar</button>
+				<button class="buttonCalendar2" id="creacion">Create new Calendar</button><br><br>
+
+				<span class="cancel change" data-seccion="#calendarios">Cancel</span>
 
 			</section>
 
@@ -159,7 +147,7 @@
 
 	<script>
 
-		$('.buttonCalendar').on('click', function(){
+		$('.change').on('click', function(){
 			$('section').fadeOut().delay(200);
 			$($(this).data('seccion')).fadeIn();
 		})
@@ -176,7 +164,7 @@
 				dia: $('#calendarDay').val(),
 				mes: $('#calendarMonth').val(),
 				hora: $('#calendarHour').val(),
-				enabled: true
+				enabled: 0
 			});
 
 			displayCalendars();
@@ -191,12 +179,14 @@
 			for(var i=1; i<=store.get('tot-calendars'); i++){
 				var c= store.get('calendars-'+i);
 
-				if(c.owner == store.get('usuarioLogged')){
+				console.log(c.enabled);
+
+				if(c.owner == store.get('usuarioLogged') && c.enabled == 0){
 					$('#contenedorDeCalendarios').append(`
 						<div class="calendariosCreados">
-							<img src="calendarCreado.png">
+							<img src="calendarCreado.png" id="imagenCalendario">
 							<span id="opcionesCalendario">
-								<p class="delete">Delete</p>
+								<p class="delete" data-id='calendars-${i}'>Delete</p>
 							</span>
 							<span id="informacion">
 								<p class="tituloOpcion" id="dia">day: ${c.dia}</p>
@@ -208,6 +198,21 @@
 				}
 			}			
 		}
+
+		var current_calendar = "";
+
+		$('body').on('click','.delete', function(){
+			current_calendar = $(this).data('id');
+			var c= store.get(current_calendar);
+			
+			if(c.enabled == 0){
+				c.enabled = c.enabled+1;
+			}
+			console.log(c);
+			displayCalendars();
+		});
+
+
 
 		displayCalendars();
 
